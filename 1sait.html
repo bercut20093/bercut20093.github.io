@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Приветствие</title>
+<link rel="stylesheet" href="bluesstyle.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .greeting-container {
+        text-align: center;
+    }
+
+    .wave {
+        display: inline-block;
+        position: relative;
+        width: 100px;
+        height: 100px;
+        animation: wave 2s infinite;
+    }
+
+    .wave:before, .wave:after {
+        content: '';
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+    }
+
+    .wave:before {
+        top: 30px;
+        left: 12px;
+        width: 30px;
+        height: 15px;
+        background-color: #3498db;
+        transform-origin: 0 50%;
+        transform: rotate(-45deg);
+    }
+
+    .wave:after {
+        top: 30px;
+        left: 58px;
+        width: 30px;
+        height height height: 15px;
+        background-color: #3498db;
+        transform-origin: 100% 50%;
+        transform: rotate(45deg);
+    }
+
+    @keyframes wave {
+        0%, 60%, 100% {
+            transform: initial;
+        }
+        30% {
+            transform: translateY(-15px);
+        }
+    }
+</style>
+</head>
+<body>
+<div class="greeting-container">
+    <h1>Привет!</h1>
+    <p>Добрый день!</p>
+    <div class="wave"></div>
+</div>
+</body>
+</html>
